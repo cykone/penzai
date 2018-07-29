@@ -1,0 +1,28 @@
+<div class="site-header">
+    <app-penzai-logo></app-penzai-logo>
+    <nav id="nav-ext" class="nav-ext">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" (click)="goBack()">&lt; Go Back</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<nav class="subnav legal-subnav first-component">
+    <div class="container">
+        <div class="row justify-content-center">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/legal/privacy" routerLinkActive="nav-link-active">Privacy &amp; Terms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/legal/cookies" routerLinkActive="nav-link-active">Cookie Policy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+<hr>
+<app-try-it></app-try-it>
+<hr>

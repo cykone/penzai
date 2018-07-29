@@ -1,0 +1,28 @@
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    border-bottom: 1px solid #bed8e2;
+}
+
+.tab-item {
+    padding: 5px 28px;
+    margin: 0 25px;
+    
+    cursor: pointer;
+    
+    color: #78969f;
+}
+
+.tab-item-active {
+    color: #3d5157;
+    border-bottom: 2px solid #3d5157;
+}
+
+.tab-item-title {
+    font-size: 20px;
+    font-weight: normal;
+}

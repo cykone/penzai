@@ -1,0 +1,43 @@
+<p *ngIf="currentStep.id != 'thanks'" class="subheadline no-top-margin">Just fill out the following boxes to send us an email!</p>
+<form #contactForm="ngForm" (ngSubmit)="nextStep()">
+
+  <div class="contact-step-container" *ngIf="currentStep.id == 'name'">
+    <label for="name">{{currentStep.label}}</label>
+    <div class="contact-step-input">
+      <input type="text" id="name" name="name" [(ngModel)]="contactData.senderName" required autofocus #nameElement/>
+      <button type="submit">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="contact-step-container" *ngIf="currentStep.id == 'email'">
+    <label for="textbox" for="email">{{currentStep.label}}</label>
+    <div class="contact-step-input">
+      <input type="text" id="email" name="email" [(ngModel)]="contactData.senderEmail" required autofocus #emailElement />
+      <button type="submit">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="contact-step-container" *ngIf="currentStep.id == 'subject'">
+    <label for="textbox" for="subject">{{currentStep.label}}</label>
+    <div class="contact-step-input">
+      <input type="text" id="subject" name="subject" [(ngModel)]="contactData.subject" required autofocus #subjectElement />
+      <button type="submit">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="contact-step-container" *ngIf="currentStep.id == 'message'">
+    <label for="textbox" for="message">{{currentStep.label}}</label>
+    <div class="contact-step-input">
+      <textarea id="messsge" name="message" [(ngModel)]="contactData.message" required autofocus #messageElement></textarea>
+      <button type="submit">&rarr;</button>
+    </div>
+  </div>
+
+  <div class="contact-step-container" *ngIf="currentStep.id == 'thanks'">
+    <div class="subheadline">{{currentStep.label}}</div>
+  </div>
+
+</form>
+<div class="contact-form-subtext" *ngIf="currentStep.id != 'thanks'">
+  <label>{{currentStep.stepNum}}/5</label>
+</div>

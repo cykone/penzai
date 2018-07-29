@@ -1,0 +1,83 @@
+<div class="component first-component comp-bg-mid">
+  <div class="container">
+    <div class="row justify-content-left">
+      <div class="col-md-5">
+        <h2 class="component-title">PENZAI</h2>
+        <h1>The perfect place for you to start doing what you want to do.</h1>
+        <p class="intro-text">PENZAI is all about you and your personal development. It supports you to find and learn new skills. Strength your
+          competency in our sandbox project with one of our exciting industry partners</p>
+      </div>
+      <div class="col-md-7">
+        <img src="./assets/images/header-howitworks.png">
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<app-landing-features></app-landing-features>
+<hr>
+<div class="component">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h2 class="component-title text-align-center">How it works</h2>
+        <app-timeline>
+          <app-timeline-section title="Plant the seed" description="Know yourself and the environment that works for you" showCollapseButton="false"
+            showContent="true" showCollapsButton="false" iconUrl="./assets/icons/plant-the-seed.png">
+            <app-timeline-bullet title="On boarding" imgSrc="">
+              Therefore we will guide you through a couple of questions about you and your preferences. And, no worries you can change
+              the result at any times
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Your Profile" textSide="right" imgSrc="">
+              Understand your personality, your preferred work environment and your motivation type. This will help you later to find a
+              role that fits you
+            </app-timeline-bullet>
+          </app-timeline-section>
+
+          <app-timeline-section title="Be Inspired" description="Find out what people with a similar profile love doing." showCollapseButton="false"
+            showContent="true" showCollapsButton="false" iconUrl="./assets/icons/find-inspiration.png">
+            <app-timeline-bullet title="A day in the life" imgSrc="">
+              Read the behind the scene of different roles to get a better picture of what a regular day in the live of this job looks
+              like. Get a feeling if the role of the profile could suite you
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Roles that fit you" textSide="right" imgSrc="">
+              Find out which roles might fit to your profile. See what people with similar profiles do and what they like and don't like
+              about their jobs.
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Role details" textSide="left" imgSrc="">
+              Find out about the important details of a role e.g. average salaries, working hours, skills needed and if it is future proof.
+            </app-timeline-bullet>
+          </app-timeline-section>
+
+          <app-timeline-section title="Start growing" description="Define your learning goals and find opportunities to learn." showCollapseButton="false"
+            showContent="true" showCollapsButton="false" iconUrl="./assets/icons/start-growing.png">
+            <app-timeline-bullet title="Define Goals" textSide="right" imgSrc="">
+              Set up the roles, skills and industries you are interested in.
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Ressources" textSide="left" imgSrc="">
+              Finding the right learning ressources can be time consuming and frustrating. We aggregate all the needed information and
+              available courses based on your goals and profile.
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Enroll" textSide="right" imgSrc="">
+              Enroll to online courses, offline courses or other events directly from PENZAI. This makes it pretty easy to stay on top
+              of all information.
+            </app-timeline-bullet>
+            <app-timeline-bullet title="Community" textSide="left" imgSrc="">
+              While you are developing skills, you always have access to the penzai community. You can ask you questions in one of the
+              topic groups and find help.
+            </app-timeline-bullet>
+          </app-timeline-section>
+        </app-timeline>
+
+        <div class="btn-group-individual justify-content-center">
+          <div class="btn btn-primary" (click)="openSignUp()">
+            Sign up for the free public beta
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<app-try-it></app-try-it>
+<hr>

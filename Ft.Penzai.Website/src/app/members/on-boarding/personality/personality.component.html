@@ -1,0 +1,17 @@
+<div class="component">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="component-title">Personality</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-focus [personality]="personality" (finish)="onSubmit()" (back)="onBack()" [hidden]="currentState.name != 'focus'"></app-focus>
+        <app-information [personality]="personality" (finish)="onSubmit()" (back)="onBack()" [hidden]="currentState.name != 'information'"></app-information>
+        <app-decission [personality]="personality" (finish)="onSubmit()" (back)="onBack()" [hidden]="currentState.name != 'decision'"></app-decission>
+        <app-life [personality]="personality" (finish)="onSubmit()" (back)="onBack()" [hidden]="currentState.name != 'life'"></app-life>
+      </div>
+    </div>
+  </div>
+</div>

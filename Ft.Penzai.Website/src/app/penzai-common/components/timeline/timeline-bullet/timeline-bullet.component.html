@@ -1,0 +1,34 @@
+<div class="step" *ngIf="textSide == 'left'">
+  <div class="step-container step-container-left">
+    <h2>{{title}}</h2>
+    <p class="text-small">
+      <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+    </p>
+  </div>
+  <div class="step-bullet-group">
+    <div class="step-bullet"></div>
+    <div class="step-line"></div>
+  </div>
+  <div class="step-container step-container-right">
+    <img class="step-img" src="{{imgSrc}}" />
+  </div>
+</div>
+
+<div class="step" *ngIf="textSide == 'right'">
+  <div class="step-container step-container-left">
+    <img class="step-img" src="{{imgSrc}}" />
+  </div>
+  <div class="step-bullet-group">
+    <div class="step-bullet"></div>
+    <div class="step-line"></div>
+  </div>
+  <div class="step-container step-container-right">
+    <h2>{{title}}</h2>
+    <p class="text-small">
+      <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+    </p>
+  </div>
+</div>
+<ng-template #contentTpl>
+  <ng-content></ng-content>
+</ng-template>

@@ -1,0 +1,88 @@
+<div class="contextual-layer">
+  <div class="menu-drop-down" [ngClass]="{'menu-drop-down-active' : isDropDownActive}" appClickOutside (appClickOutside)="close($event)">
+    <div class="menu-drop-down-arrow">
+      <i class="fas fa-caret-up"></i>
+    </div>
+    <div class="menu-drop-down-content shadow">
+      <ul class="nav">
+        <li class="nav-item" routerLink="/profile">
+          <a class="nav-link">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="site-wrapper overflow-hidden">
+  <header class="site-header-member">
+    <app-penzai-logo></app-penzai-logo>
+    <nav class="nav-group-end">
+      <div class="profile-group" *ngIf="currentProfile != null">
+        <span class="profile-name">Hi, {{currentProfile.firstName}}</span>
+        <a class="profile-caret" [ngClass]="{'profile-caret-active' : isDropDownActive}" (click)="openDropDown()">
+          <i id="openDropDown" class="fas fa-caret-down"></i>
+        </a>
+        <span class="profile-img-container">
+          <img src="./assets/profiles/mike.jpg" />
+        </span>
+      </div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-bell"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="site-menu-container">
+    <nav class="nav-menu">
+      <div class="menu-title">
+        Menu
+      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <div class="nav-item-group" routerLink="/member/inspiration" routerLinkActive="nav-item-active">
+            <div class="nav-item-icon">
+              <i class="far fa-lightbulb"></i>
+            </div>
+            <a class="nav-link">Inspiration</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item-group" routerLink="/member/learn" routerLinkActive="nav-item-active">
+            <div class="nav-item-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <a class="nav-link">Learn</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item-group" routerLinkActive="nav-item-active">
+            <div class="nav-item-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <a class="nav-link">Projects</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-item-group" routerLinkActive="nav-item-active">
+            <div class="nav-item-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <a class="nav-link">Community</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="site-content">
+      <div class="scroll-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

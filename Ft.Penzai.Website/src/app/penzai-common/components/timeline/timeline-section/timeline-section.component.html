@@ -1,0 +1,21 @@
+<div class="step-section-header">
+  <div class="step-section-icon">
+    <img src="{{iconUrl}}" />
+  </div>
+  <div class="step-line short"></div>
+  <div class="step-section-content">
+    <h4>{{title}}</h4>
+    <p>{{description}}</p>
+  </div>
+  <div class="step-line"></div>
+  <div class="btn-collapse-container" [hidden]="!showCollapsButton">
+    <div class="btn-collapse" (click)="changeContentVisibility()">
+      <div>{{!showContent ? "+" : "&#8722;"}}</div>
+    </div>
+  </div>
+  <div class="step-line"></div>
+</div>
+<div [hidden]="!showContent">
+  <ng-content></ng-content>
+</div>
+

@@ -1,0 +1,26 @@
+<div class="feedback" [ngClass]="{'feedback-active' : isPopupActive}">
+    <div class="feedback-btn-container">
+        <div class="btn btn-feedback shadow" (click)="changeFeedbackPopup()">
+            Got Feedback?
+        </div>
+    </div>
+
+    <div class="feedback-body shadow">
+        <h2>Please leave us some feedback!</h2>
+        <p class="text-small">Please don't hesitate to send us any feedback, critique thoughts or just leave us a message to say hi!</p>
+        <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+            <div class="form-group">
+                <label>Email*</label>
+                <input class="form-control" type="text" id="email" name="email" required email [(ngModel)]="feedback.email">
+            </div>
+            <div class="form-group">
+                <label>Message*</label>
+                <textarea style="height: 152px" class="form-control" type="text" id="message" name="message" required [(ngModel)]="feedback.message"></textarea>
+            </div>
+            <div class="btn-group-individual justify-content-end">
+                <button type="submit" class="btn btn-primary" [disabled]="!feedbackForm.form.valid">Send message</button>
+            </div>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>

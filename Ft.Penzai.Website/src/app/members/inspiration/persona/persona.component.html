@@ -1,0 +1,38 @@
+<div class="component-fluid">
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col-12"> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="component-title">Personas</h2>
+      </div>
+    </div>
+    <div class="row">
+      <section class="col-3 section-container" *ngFor="let persona of personas">
+        <div class="section-content shadow">
+          <div class="section-header justify-content-end">
+            <div class="section-info">
+              Match 97%
+            </div>
+          </div>
+          <img class="section-img-responsive section-clickable" src="{{persona.imageSource}}" (click)="openDetails(persona)" />
+          <div class="section-body ">
+            <div class="section-title section-clickable" (click)="openDetails(persona)">{{persona.name}}</div>
+            <div class="section-subtitle ">{{persona.jobDescription}}</div>
+            <p class="section-p ">{{persona.intro}}</p>
+            <p class="section-p ">
+              <a href="javascript:void()" (click)="openDetails(persona)">Find out more ></a>
+            </p>
+          </div>
+          <div class="section-footer ">
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- </div>
+    </div>
+  </div> -->
+</div>

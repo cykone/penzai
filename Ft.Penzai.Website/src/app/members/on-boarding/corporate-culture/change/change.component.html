@@ -1,0 +1,48 @@
+<h3 class="form-question">How do you prioritize regarding your workplace and changes?</h3>
+<form (ngSubmit)="onSubmit()" #changeForm="ngForm">
+  <div class="form-flex">
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="flexibility" value="0" type="radio" [(ngModel)]="culture.change" required>
+      <label for="flexibility" class="form-item-description">
+        <h4>Highly Flexible</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you prioritiz innovation?</li>
+          <li class="form-item-description-list-item">Does an open environment make you thrive? </li>
+          <li class="form-item-description-list-item">Do you think diversity is important for an organisation company?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="mid-flexibility" value="1" type="radio" [(ngModel)]="culture.change" required>
+      <label for="mid-flexibility" class="form-item-description">
+        <h4>Flexible</h4>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="mid-stable" value="2" type="radio" [(ngModel)]="culture.change" required>
+      <label for="mid-stable" class="form-item-description">
+        <h4>Stable</h4>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="stable" value="3" type="radio" [(ngModel)]="culture.change" required>
+      <label for="stable" class="form-item-description">
+        <h4>Highly Stable</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you prefere consitency?</li>
+          <li class="form-item-description-list-item">Makes predictability you feel comfortable?</li>
+          <li class="form-item-description-list-item">Do you think maintaining the status quo of a company is important?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+  </div>
+  <div class="btn-group-individual justify-content-center">
+    <Button type="button" class="btn btn-secondary" (click)="onBack()">Back</Button>
+    <Button type="submit" class="btn btn-primary" [disabled]="!changeForm.form.valid">Next</Button>
+  </div>
+</form>

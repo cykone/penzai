@@ -1,0 +1,50 @@
+<h3 class="form-question">What kind of people interaction do you value more?</h3>
+<form (ngSubmit)="onSubmit()" #cultureForm="ngForm">
+  <div class="form-flex">
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="independent" value="0" type="radio" [(ngModel)]="culture.interaction" required>
+      <label for="independent" class="form-item-description">
+        <h4>Highly Independent</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you prefere a high level of autonomy?</li>
+          <li class="form-item-description-list-item">Does a competetive environment make you thrive? </li>
+          <li class="form-item-description-list-item">Do you think your actions should be transparent to others?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="mid-independent" value="1" type="radio" [(ngModel)]="culture.interaction"
+        required>
+      <label for="mid-independent" class="form-item-description">
+        <h4>Independent</h4>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="mid-interdependent" value="2" type="radio" [(ngModel)]="culture.interaction"
+        required>
+      <label for="mid-interdependent" class="form-item-description">
+        <h4>Interdependent</h4>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="culture" id="interdependent" value="3" type="radio" [(ngModel)]="culture.interaction" required>
+      <label for="interdependent" class="form-item-description">
+        <h4>Highly Interdependent</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do prefere environments that emphasise a high level of integration?</li>
+          <li class="form-item-description-list-item">Do you believe that success is a group effort?</li>
+          <li class="form-item-description-list-item">Do you thrive in collaborative environments?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+  </div>
+  <div class="btn-group-individual justify-content-center">
+    <Button type="button" class="btn btn-secondary" (click)="onBack()">Back</Button>
+    <Button type="submit" class="btn btn-primary" [disabled]="!cultureForm.form.valid">Next</Button>
+  </div>
+</form>

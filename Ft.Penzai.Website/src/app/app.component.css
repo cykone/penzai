@@ -1,0 +1,45 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: -492px;
+    right: 48px;
+    z-index: 300;
+
+    transition: bottom 0.25s;
+}
+
+.feedback-btn-container {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: flex-end;
+}
+
+.feedback-active {
+    bottom: -30px;
+}
+
+.btn-feedback {
+    background: #053441;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #ffffff;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-right: 15px;
+}
+
+.btn-feedback:hover {
+    background: #1e4854;
+}
+
+.feedback-body {
+    width: 550px;
+    height: 490px;
+    border: 2px solid #053441;
+    padding: 18px 25px;
+    /* background: #EDF7FB; */
+    background: #ffffff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}

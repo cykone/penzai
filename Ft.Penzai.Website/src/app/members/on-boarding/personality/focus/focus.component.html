@@ -1,0 +1,47 @@
+<h3 class="form-question">Are you outwardly or inwardly focused?</h3>
+<form (ngSubmit)="onSubmit()" #focusForm="ngForm">
+  <div class="form-flex">
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="extravert" value="0" type="radio" [(ngModel)]="personality.focus" required>
+      <label for="extravert" class="form-item-description">
+        <h4>Extravert</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Could you describe yourself as talkative, outgoing?</li>
+          <li class="form-item-description-list-item">Do you prefere to be in a fast pace environment? </li>
+          <li class="form-item-description-list-item">Do you workout ideas with others, think out loud?</li>
+          <li class="form-item-description-list-item">Do you like to be the center of attention?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-extravert" value="1" type="radio" [(ngModel)]="personality.focus"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-intravert" value="2" type="radio" [(ngModel)]="personality.focus"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="intravert" value="3" type="radio" [(ngModel)]="personality.focus" required>
+      <label for="intravert" class="form-item-description">
+        <h4>Intravert</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Could you describe yourself as reserved, private?</li>
+          <li class="form-item-description-list-item">Do you prefere a slower pace with time for contemplation?</li>
+          <li class="form-item-description-list-item">Do you think things through inside your head?</li>
+          <li class="form-item-description-list-item">Would you rather observe than be in the center of attention?</li>
+        </ul>
+      </label>
+
+    </div>
+    <span class="form-flex-seperator"></span>
+  </div>
+  <div class="btn-group-individual justify-content-center">
+    <Button type="button" class="btn btn-secondary" (click)="onBack()">Back</Button>
+    <Button type="submit" class="btn btn-primary" [disabled]="!focusForm.form.valid">Next</Button>
+  </div>
+</form>

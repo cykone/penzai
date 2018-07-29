@@ -1,0 +1,48 @@
+<h3 class="form-question">How do you prefere to take in information?</h3>
+<form (ngSubmit)="onSubmit()" #informationForm="ngForm">
+  <div class="form-flex">
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="sensing" value="0" type="radio" [(ngModel)]="personality.takeInformation"
+        required>
+      <label for="sensing" class="form-item-description">
+        <h4>Sensing</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you focus on the reality of how things are?</li>
+          <li class="form-item-description-list-item">Do you pay attention to concrete facts and details?</li>
+          <li class="form-item-description-list-item">Do you prefer ideas that have practical applications?</li>
+          <li class="form-item-description-list-item">Do you like to describe things in a specific, literal way?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-sensing" value="1" type="radio" [(ngModel)]="personality.takeInformation"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-intuition" value="2" type="radio" [(ngModel)]="personality.takeInformation"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="intuition" value="3" type="radio" [(ngModel)]="personality.takeInformation"
+        required>
+      <label for="intuition" class="form-item-description">
+        <h4>Intuition</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you imagine all the possibilities of how things could be?</li>
+          <li class="form-item-description-list-item">Do you notice the big picture, see how everything connects?</li>
+          <li class="form-item-description-list-item">Do you enjoy ideas and concepts for their own sake?</li>
+          <li class="form-item-description-list-item">Do you like to describe things in a figurative, poetic way?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+  </div>
+  <div class="btn-group-individual justify-content-center">
+    <Button type="button" class="btn btn-secondary" (click)="onBack()">Back</Button>
+    <Button type="submit" class="btn btn-primary" [disabled]="!informationForm.form.valid">Next</Button>
+  </div>
+</form>

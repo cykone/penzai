@@ -1,0 +1,46 @@
+.contact-step-input {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #bed8e2;
+    padding: 0px 8px;
+}
+
+.contact-step-input input {
+    font-size: 26px;
+    flex-grow: 1;
+    padding: 16px 8px;
+    border: none;
+}
+
+.contact-step-input textarea {
+    font-size: 16px;
+    flex-grow: 1;
+    padding: 8px;
+    height: 150px;
+    border: none;
+}
+
+.contact-step-input button {
+    background: none;
+    border: none;
+    color: #04778f;
+    font-size: 30px;
+    transition: transform 0.6s cubic-bezier(.42, 0, 0, 1);
+}
+
+.contact-step-input button:hover {
+    transform: translateX(6px);
+}
+
+.contact-form-subtext {
+    text-align: right;
+}
+
+.contact-form-subtext label {
+    color: #768590;
+}
+
+.socialmedia li {
+    margin-right: 6px;
+}

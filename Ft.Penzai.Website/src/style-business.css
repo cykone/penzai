@@ -1,0 +1,151 @@
+.site-business {
+    color: #5e5d5d;
+}
+
+.site-business .site-content {
+    background-color: #fcf4ee;
+}
+
+.site-business hr {
+    border-top-color: #bed8e2;
+}
+
+.site-business h1,
+.site-business h3,
+.site-business h4,
+.site-business h5,
+.site-business h6 {
+    /* color: #321602; */
+    color: #291404;
+}
+
+.site-business h2 {
+    color: #e28a4f;
+}
+
+.site-business .intro-text,
+.site-business .intro-text-h5,
+.site-business .intro-text-h6 {
+    color: #62838d;
+}
+
+.site-business .site-header {
+    background: #de7b07;
+    color: #f6ebdc;
+    border-bottom-color: #de6207;
+}
+
+.site-business .site-hero {
+    background-image: url('./assets/images/hero-image-business.jpg');
+    background-color: #de7b07;
+}
+
+.site-business .site-hero .intro-text {
+    color: #ffffff;
+}
+
+.site-business .site-hero h1 {
+    color: #ffffff;
+}
+
+.site-business .nav-link-primary {
+    color: #ffffff;
+    background: #d35c1b;
+}
+
+.site-business .nav-link-primary:hover {
+    background: #df6d2e;
+}
+
+.site-business .nav-ext .nav-link,
+.site-business .nav-auth .nav-link {
+    color: #e6c9a1;
+}
+
+.site-business .nav-ext .nav-link:hover,
+.site-business .nav-auth .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-business .nav-ext .nav-link-active,
+.site-business .nav-auth .nav-link-active {
+    color: #c6dbe1 !important;
+}
+
+.site-business .nav-ext .nav-link-active::after {
+    border-bottom: 2px solid #a17623;
+}
+
+.site-business .site-footer {
+    background: #de7b07;
+}
+
+.site-business .footer-nav-section-title {
+    color: #053441;
+}
+
+.site-business .site-footer .nav-link {
+    color: #dfcfb9;
+}
+
+.site-business .site-footer .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-business .disclaimer {
+    background: #291404;
+}
+
+.site-business .disclaimer .nav-link {
+    color: #dfcfb9;
+}
+
+/* Overlay */
+.site-business .cdk-overlay-dark-backdrop {
+    background: #291404;
+}
+
+/* Buttons */
+
+.site-business .btn-primary {
+    background: #d35c1b;
+    border-color: #d35c1b;
+    color: #ffffff;
+}
+
+.site-business .btn-primary:hover {
+    background: #df6d2e;
+    border-color: #df6d2e;
+}
+
+.site-business .btn-primary:disabled {
+    background: #d35c1b;
+    border-color: #d35c1b;
+    opacity: 0.5;
+}
+
+.site-business .btn-secondary {
+    color: #97877c;
+    background: transparent;
+    border-color: #97877c;
+}
+
+.site-business .btn-secondary:hover {
+    color: #cc9069;
+    background: transparent;
+    border-color: #cc9069;
+}
+
+/* Components */
+
+.site-business .comp-bg-light {
+    background: #f8fbfe;
+}
+
+.site-business .comp-bg-mid-light {
+    background: #edf7fb;
+}
+
+.site-business .comp-bg-mid {
+    background: #daeaf0;
+}

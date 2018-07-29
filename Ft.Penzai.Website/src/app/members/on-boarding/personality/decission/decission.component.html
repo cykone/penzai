@@ -1,0 +1,48 @@
+<h3 class="form-question">How do you prefer to make decisions?</h3>
+<form (ngSubmit)="onSubmit()" #decisionForm="ngForm">
+  <div class="form-flex">
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="thinking" value="0" type="radio" [(ngModel)]="personality.decissionMaking"
+        required>
+      <label for="thinking" class="form-item-description">
+        <h4>Thinking</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you make decissions in an impersonal way, using logical reasoning?</li>
+          <li class="form-item-description-list-item">Do you value justice, fairness? </li>
+          <li class="form-item-description-list-item">Do you enjoy finding flaws in an argument?</li>
+          <li class="form-item-description-list-item">Could you be described as reasonable, level-headed?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-thinking" value="1" type="radio" [(ngModel)]="personality.decissionMaking"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="mid-feeling" value="2" type="radio" [(ngModel)]="personality.decissionMaking"
+        required>
+    </div>
+    <span class="form-flex-seperator"></span>
+    <div class="form-flex-item">
+      <input class="form-control" name="personality" id="feeling" value="3" type="radio" [(ngModel)]="personality.decissionMaking"
+        required>
+      <label for="feeling" class="form-item-description">
+        <h4>Feeling</h4>
+        <ul class="form-item-description-list">
+          <li class="form-item-description-list-item">Do you base your decisions on personal values and how your actions effect others?</li>
+          <li class="form-item-description-list-item">Do you value harmony, forgiveness?</li>
+          <li class="form-item-description-list-item">Do you like to please others and point out the best in people?</li>
+          <li class="form-item-description-list-item">Could you be described as warm, empathetic?</li>
+        </ul>
+      </label>
+    </div>
+    <span class="form-flex-seperator"></span>
+  </div>
+  <div class="btn-group-individual justify-content-center">
+    <Button type="button" class="btn btn-secondary" (click)="onBack()">Back</Button>
+    <Button type="submit" class="btn btn-primary" [disabled]="!decisionForm.form.valid">Next</Button>
+  </div>
+</form>

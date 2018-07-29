@@ -1,0 +1,95 @@
+<div class="component comp-bg-mid-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-7 text-align-center">
+        <h2 class="component-title">Features</h2>
+        <h5>PENZAI gives you the tools to grow and access to our industry partners</h5>
+        <p class="intro-text-h5">While you are learning, PENZAI grows with you and learns about your learning style, preferences and interests. It
+          helps you to navigate your growth journey by personalising your learning experience. Based on this knowledge, PENZAI
+          is able to connect you with sandbox projects from industry partners which are waiting to support your journey</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 justify-content-center">
+        <app-tabs>
+          <app-tab title="Organized learning">
+            <div class="tab-content-container">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img class="tab-img shadow" src="./assets/images/screenshots/learning.jpg" />
+                  </div>
+                  <div class="col-6 tab-text-container">
+                    <h6>On the Learning dashboard you can manage your growth process easily
+                    </h6>
+                    <p class="intro-text-h6"></p>
+                    <ul class="text-list">
+                      <li>Upcoming events and meetups in your local area, which are relevant to your current learning path.
+                      </li>
+                      <li>Get an overview of the best rated and valuable online courses and enroll directly to them.</li>
+                      <li>Manage your enrolled courses and the events you want to attend.</li>
+                      <li>Check your results and endorsements. See what you achieved and probably what you didn't like.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </app-tab>
+          <app-tab title="Learning Community">
+            <div class="tab-content-container">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img class="tab-img" src="./assets/images/TabImagePlaceholder.png" />
+                  </div>
+                  <div class="col-6 tab-text-container">
+                    <h6>The community brings people together to help each other to learn and grow
+                    </h6>
+                    <p class="intro-text-h6"></p>
+                    <ul class="text-list">
+                      <li>Something is stopping you from making progress? You need help with this one thing you don't get. Ask
+                        questions and find answers in the community.</li>
+                      <li>The community is separated in different topic groups with interests sub channels. For instance, you
+                        want to ask a question about blockchain. Checkout the blockchain channel in the distributed ledger
+                        focus group.
+                      </li>
+                      <li>Subscribe to specific channels and get updates immediately by notification and/or email.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </app-tab>
+          <app-tab title="Industry Partners">
+            <div class="tab-content-container">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img class="tab-img" src="./assets/images/TabImagePlaceholder.png" />
+                  </div>
+                  <div class="col-6 tab-text-container">
+                    <h6>Our industry partners define the brief. You work on it.</h6>
+                    <p class="intro-text-h6"></p>
+                    <ul class="text-list">
+                      <li>Get invites to apply sandbox projects and briefs defined be real businesses out there.
+                      </li>
+                      <li>Once accepted, you get the real hands on experience of what the jobs feels like.
+                      </li>
+                      <li>Set up the roles, skills and industries you are interested in.
+                      </li>
+                      <li>Collect endorsements and promotions into the orbit of the organisation, which means from now on you can get invites to work on real projects with them.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </app-tab>
+        </app-tabs>
+        <div class="btn-group-individual justify-content-center ">
+          <div class="btn btn-primary" (click)="openSignUp()">Join the free public beta</div>
+          <div class="btn btn-secondary" routerLink="/contact">Questions? Get in Touch!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
