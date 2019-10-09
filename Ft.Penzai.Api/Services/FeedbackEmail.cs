@@ -11,7 +11,7 @@ namespace Ft.Penzai.Api.Services
         public static FeedbackEmail Create(string fromEmail, string message)
         {
             var ret = new FeedbackEmail();
-            ret.AddReceiverAddress("florian.tiefenbach@network.rca.ac.uk");
+            ret.AddReceiverAddress("florian.tiefenbach@outlook.com");
             ret.SetFrom("no-reply@penzai.io");
             ret.SetSubject("Somebody send a feedback from Penzai website");
             ret.SetDisplayName("Penzai Feedback");

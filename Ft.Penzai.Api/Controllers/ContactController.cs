@@ -40,12 +40,10 @@ namespace Ft.Penzai.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            await this.logService.LogAsync("test");
-            await this.dbContext.SaveChangesAsync();
-
+            await this.logService.LogAsync("test", "testmessage");
             return new OkObjectResult("Works");
         }
-        
+
         [HttpPost("demo")]
         [AllowAnonymous]
         public async Task<IActionResult> RequestDemo([FromBody] RequestDemo requestDemo)
@@ -78,7 +76,7 @@ namespace Ft.Penzai.Api.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> SendEmail([FromBody]EmailData emailData)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return new BadRequestResult();
             }

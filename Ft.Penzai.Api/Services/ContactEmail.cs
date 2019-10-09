@@ -11,7 +11,7 @@ namespace Ft.Penzai.Api.Services
         public static ContactEmail Create(string senderName, string fromEmail, string subject, string message)
         {
             var ret = new ContactEmail();
-            ret.AddReceiverAddress("florian.tiefenbach@network.rca.ac.uk");
+            ret.AddReceiverAddress("florian.tiefenbach@outlook.com");
             ret.SetFrom("no-reply@penzai.io");
             ret.SetSubject(subject);
             ret.SetBody(GenerateEmailBody(senderName, fromEmail, message));

@@ -16,7 +16,7 @@ namespace Ft.Penzai.Api.Services
         public static RequestDemoEmail Create(string firstname, string lastname, string companyname, string fromEmail, string message)
         {
             var ret = new RequestDemoEmail();
-            ret.AddReceiverAddress("florian.tiefenbach@network.rca.ac.uk");
+            ret.AddReceiverAddress("florian.tiefenbach@outlook.com");
             ret.SetFrom("no-reply@penzai.io");
             ret.SetSubject("A Company is requesting a demo");
             ret.SetDisplayName("Penzai Website");

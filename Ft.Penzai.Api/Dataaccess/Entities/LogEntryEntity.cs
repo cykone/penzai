@@ -6,14 +6,17 @@ namespace Ft.Penzai.Api.Dataaccess.Entities
     {
         public string Message { get; private set; }
 
+        public string Context { get; private set; }
+
         #region Factory
 
-        public static LogEntryEntity Create(string Message)
+        public static LogEntryEntity Create(string context, string Message)
         {
             var ret = new LogEntryEntity
             {
                 CreatedOn = DateTimeOffset.UtcNow,
-                Message = Message
+                Message = Message,
+                Context = context
             };
 
             return ret;

@@ -26,12 +26,13 @@ namespace Ft.Penzai.Api.Services.LoggerProviders
 
         public async Task<List<LogEntry>> GetLogsAsync()
         {
-            return this.context.LogEntries.Select(le => le.ToDto()).ToList();
+            return await this.context.LogEntries.Select(le => le.ToDto()).ToListAsync();
         }
 
-        public async Task LogAsync(string message)
+        public async Task LogAsync(string context, string message)
         {
-            this.context.LogEntries.Add(LogEntryEntity.Create(message));
+            this.context.LogEntries.Add(LogEntryEntity.Create(context, message));
+            await this.context.SaveChangesAsync();
         }
     }
 }

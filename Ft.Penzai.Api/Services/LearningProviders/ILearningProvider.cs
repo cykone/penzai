@@ -8,9 +8,6 @@ namespace Ft.Penzai.Api.Services.LearningProviders
 {
     public interface ILearningProvider
     {
-        public Task<List<Course>> GetCoursesForCategory(Category category)
-        {
-        
-        }
+        Task<List<Course>> GetCoursesForCategory(Category category);
     }
 }

@@ -6,7 +6,7 @@ namespace Ft.Penzai.Api.Services.LoggerProviders.Contracts
 {
     public interface ILogService
     {
-        Task LogAsync(string message);
+        Task LogAsync(string context, string message);
 
         Task<List<LogEntry>> GetLogsAsync();
     }

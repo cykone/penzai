@@ -26,6 +26,7 @@ export class LoggingService {
   public log(msg: string): Promise<boolean> {
     const logEntry = new LogEntry();
     logEntry.message = msg;
+    logEntry.context = "[Penzai]";
 
     return this.httpClient.post(serviceRoot, logEntry)
       .toPromise()

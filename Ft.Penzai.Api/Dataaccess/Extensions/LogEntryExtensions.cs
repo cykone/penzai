@@ -14,7 +14,8 @@ namespace Ft.Penzai.Api.Dataaccess.Extensions
             var ret = new LogEntry
             {
                 CreatedOn = entry.CreatedOn.UtcDateTime,
-                Message = entry.Message
+                Message = entry.Message,
+                Context = entry.Context
             };
 
             return ret;
@@ -22,7 +23,7 @@ namespace Ft.Penzai.Api.Dataaccess.Extensions
 
         public static LogEntryEntity ToEntity(this LogEntry entry)
         {
-            var ret = LogEntryEntity.Create(entry.Message);
+            var ret = LogEntryEntity.Create(entry.Context, entry.Message);
             return ret;
         }
     }
