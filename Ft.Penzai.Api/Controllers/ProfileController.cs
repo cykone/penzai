@@ -15,6 +15,7 @@ namespace Ft.Penzai.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/Profile")]
+    [Authorize]
     public class ProfileController : Controller
     {
         #region Fields
@@ -52,7 +53,6 @@ namespace Ft.Penzai.Api.Controllers
         #region UserProfile
 
         [HttpGet("short/{userId}")]
-        [Authorize]
         public async Task<IActionResult> GetUserProfileShort(string userId)
         {
             var userAccount = await this.userManager.FindByIdAsync(userId);

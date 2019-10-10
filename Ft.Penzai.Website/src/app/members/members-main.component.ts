@@ -4,6 +4,7 @@ import { UserAccount } from '../penzai-common/account/user-account';
 import { UserProfileService } from '../penzai-common/profile/user-profile.service';
 import { Router } from '@angular/router';
 import { UserProfileShort } from '../penzai-common/profile/models/user-profile-short';
+import { AccountService } from '../penzai-common/account/account.service';
 
 @Component({
   selector: 'app-members-main',
@@ -12,7 +13,10 @@ import { UserProfileShort } from '../penzai-common/profile/models/user-profile-s
 })
 export class MembersMainComponent implements OnInit {
 
-  constructor(private el: ElementRef, private userProfileService: UserProfileService, private router: Router) { }
+  constructor(private el: ElementRef,
+    private userProfileService: UserProfileService,
+    private accountService: AccountService,
+    private router: Router) { }
 
   public currentProfile: UserProfileShort;
 
@@ -41,6 +45,16 @@ export class MembersMainComponent implements OnInit {
 
   public closeDropDown(): void {
 
+  }
+
+  public deleteCurrentAccount() {
+    this.accountService.deleteAccount(this.currentProfile.id).then((result: boolean) => {
+      if (result) {
+        // ok
+        this.router.navigate(['/']);
+      }
+      console.log('Could not delete account');
+    });
   }
 
   @HostListener('document:click', ['$event.target'])

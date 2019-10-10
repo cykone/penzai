@@ -43,13 +43,14 @@ export class AppComponent implements OnInit {
 
       try {
         if (value instanceof NavigationStart) {
-          this.loggingService.log('[router] ' + value);
+          this.loggingService.log('[router] ' + value.id);
         }
 
       } catch (err) {
         console.log('error logging');
       }
 
+      // Changes Color schema
       if (value instanceof NavigationEnd) {
         if (value.url.startsWith(this.pathBusiness)) {
           this.renderer.removeClass(document.body, this.siteClassCommunity);

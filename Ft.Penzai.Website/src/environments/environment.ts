@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  penzaiApiRootUrl: 'http://localhost:51138/api',
+  penzaiApiRootUrl: 'http://localhost:49999/api',
   registerCallbackUrl: 'http://localhost:4200/email-confirmed'
 };

@@ -27,6 +27,7 @@ namespace Ft.Penzai.Api.Dataaccess.Extensions
         {
             var ret = new UserProfileShort
             {
+                Id = account.Id,
                 FirstName = account.FirstName
             };
 

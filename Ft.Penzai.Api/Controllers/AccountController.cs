@@ -22,6 +22,7 @@ namespace Ft.Penzai.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/Accounts")]
+    [Authorize]
     public class AccountsController : Controller
     {
         #region Fields
@@ -189,7 +190,7 @@ namespace Ft.Penzai.Api.Controllers
 
         #region manageAccount
 
-        [HttpDelete]
+        [HttpDelete("{userId}")]
         public async Task<IActionResult> DeleteAccount(string userId)
         {
             if (!ModelState.IsValid)

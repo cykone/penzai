@@ -59,7 +59,7 @@ export class AccountService {
   }
 
   public deleteAccount(userId: string): Promise<boolean> {
-    return this.httpClient.delete(serviceRoot + '/delete/' + userId, { headers: headers })
+    return this.httpClient.delete(serviceRoot + '/' +  userId)
       .toPromise()
       .then(_ => true)
       .catch((err: HttpErrorResponse) => {
