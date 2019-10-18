@@ -1,29 +1,42 @@
 <div class="site-wrapper">
   <header class="site-header">
     <app-penzai-logo></app-penzai-logo>
-    <nav id="nav-ext" class="nav-ext">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/how-it-works" routerLinkActive="nav-link-active">How it works?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="nav-link-active">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/business" routerLinkActive="nav-link-active">For Organisations</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="nav-divider"></div>
-    <div id="nav-auth" class="nav-auth">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link nav-link-primary" (click)="openRegistration()">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void()" (click)="openSignIn()">Sign In</a>
-        </li>
-      </ul>
+    <div class="main-nav">
+      <nav id="nav-ext"
+           class="nav-ext">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/how-it-works"
+               routerLinkActive="nav-link-active">How it works?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/about"
+               routerLinkActive="nav-link-active">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/business"
+               routerLinkActive="nav-link-active">For Organisations</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-divider"></div>
+      <div id="nav-auth"
+           class="nav-auth">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link nav-link-primary"
+               (click)="openRegistration()">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               href="javascript:void()"
+               (click)="openSignIn()">Sign In</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main class="site-content">

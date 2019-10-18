@@ -12,7 +12,7 @@ export class TryItComponent implements OnInit {
 
   constructor(private overlayService: OverlayService) { }
 
-  ngOnInit() {
+  public ngOnInit(): void {
   }
 
   public openSignIn(): void {

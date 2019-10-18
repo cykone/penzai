@@ -1,0 +1,12 @@
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-items: flex-end;
+}
+
+@media {
+    .main-nav {
+        display: none;
+    }
+}

@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+    .section-seed section {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-seed .section-border-right::after,
+    .section-seed .section-border-left::after {
+        border: none;
+        display: none;
+    }
+}

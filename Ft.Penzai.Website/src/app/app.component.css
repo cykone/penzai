@@ -43,3 +43,9 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
+
+@media (max-width: 767px) {
+    .feedback {
+        display: none;
+    }
+}
