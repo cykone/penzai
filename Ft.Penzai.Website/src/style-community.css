@@ -159,7 +159,7 @@
 }
 
 .site-community .bg-help {
-    background: url('./assets/images/help.jpg') no-repeat center center;
+    background: url('./assets/images/help.jpg') no-repeat;
     background-color: #daeaf0;
     background-size: cover;
 }
