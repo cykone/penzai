@@ -42,7 +42,14 @@ namespace Ft.Penzai.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] LogEntry logEntry)
         {
-            var logEntryEntity = logEntry.ToEntity();
+
+            var userAgent = string.Empty;
+            if (this.Request.Headers.Keys.Any(v => v == "User-Agent"))
+            {
+                userAgent = this.Request.Headers["User-Agent"].ToString();
+            }
+
+            var logEntryEntity = logEntry.ToEntity(userAgent);
             this.dbContext.LogEntries.Add(logEntryEntity);
             await this.dbContext.SaveChangesAsync();
 

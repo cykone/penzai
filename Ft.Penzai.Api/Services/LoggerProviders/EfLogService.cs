@@ -29,9 +29,9 @@ namespace Ft.Penzai.Api.Services.LoggerProviders
             return await this.context.LogEntries.Select(le => le.ToDto()).ToListAsync();
         }
 
-        public async Task LogAsync(string context, string message)
+        public async Task LogAsync(string context, string message, string userAgent)
         {
-            this.context.LogEntries.Add(LogEntryEntity.Create(context, message));
+            this.context.LogEntries.Add(LogEntryEntity.Create(context, message, userAgent));
             await this.context.SaveChangesAsync();
         }
     }

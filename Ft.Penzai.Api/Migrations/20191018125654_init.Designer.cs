@@ -11,7 +11,7 @@ using System;
 namespace Ft.Penzai.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180616170144_init")]
+    [Migration("20191018125654_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,11 +25,15 @@ namespace Ft.Penzai.Api.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Context");
+
                     b.Property<DateTimeOffset>("CreatedOn");
 
                     b.Property<string>("Message");
 
                     b.Property<DateTimeOffset?>("ModifiedOn");
+
+                    b.Property<string>("UserAgent");
 
                     b.HasKey("Id");
 

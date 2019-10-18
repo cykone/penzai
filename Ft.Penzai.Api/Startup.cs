@@ -114,7 +114,7 @@ namespace Ft.Penzai.Api
             app.UseAuthentication();
             app.UseMvc();
 
-            dbInit.InitializeAsync().Wait();
+          dbInit.InitializeAsync().Wait();
         }
     }
 }

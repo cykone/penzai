@@ -54,9 +54,11 @@ namespace Ft.Penzai.Api.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    Context = table.Column<string>(nullable: true),
                     CreatedOn = table.Column<DateTimeOffset>(nullable: false),
                     Message = table.Column<string>(nullable: true),
-                    ModifiedOn = table.Column<DateTimeOffset>(nullable: true)
+                    ModifiedOn = table.Column<DateTimeOffset>(nullable: true),
+                    UserAgent = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

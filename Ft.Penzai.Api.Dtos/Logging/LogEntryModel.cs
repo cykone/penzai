@@ -9,5 +9,7 @@ namespace Ft.Penzai.Api.Dtos.Logging
         public string  Message { get; set; }
 
         public string Context { get; set; }
+
+        public string UserAgent { get; set; }
     }
 }

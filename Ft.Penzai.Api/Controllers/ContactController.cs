@@ -40,7 +40,7 @@ namespace Ft.Penzai.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            await this.logService.LogAsync("test", "testmessage");
+            await this.logService.LogAsync("test", "testmessage", "testclient");
             return new OkObjectResult("Works");
         }
 

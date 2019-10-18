@@ -32,6 +32,8 @@ namespace Ft.Penzai.Api.Migrations
 
                     b.Property<DateTimeOffset?>("ModifiedOn");
 
+                    b.Property<string>("UserAgent");
+
                     b.HasKey("Id");
 
                     b.ToTable("LogEntries");

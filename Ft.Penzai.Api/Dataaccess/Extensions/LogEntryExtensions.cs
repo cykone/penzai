@@ -15,15 +15,17 @@ namespace Ft.Penzai.Api.Dataaccess.Extensions
             {
                 CreatedOn = entry.CreatedOn.UtcDateTime,
                 Message = entry.Message,
-                Context = entry.Context
+                Context = entry.Context,
+                UserAgent = entry.UserAgent
+                
             };
 
             return ret;
         }
 
-        public static LogEntryEntity ToEntity(this LogEntry entry)
+        public static LogEntryEntity ToEntity(this LogEntry entry, string userAgent)
         {
-            var ret = LogEntryEntity.Create(entry.Context, entry.Message);
+            var ret = LogEntryEntity.Create(entry.Context, entry.Message, userAgent);
             return ret;
         }
     }
